@@ -111,7 +111,7 @@
         background-color: var(--primary-white);
         display: flex;
         justify-content: start;
-        display: none;
+        /* display: none; */
     }
 
     .mobile-nav > ul {
@@ -128,9 +128,6 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        margin-right: -1.5rem;
-    }
-    .btn-hamburger {
         padding-top: 1rem;
     }
 
@@ -202,11 +199,9 @@
         gap: 2rem;
         margin-top: 4rem;
     }
-    
+
     .top-article-card {
         display: flex;
-        gap: 2rem;
-        background-color: #e9aa52;
         max-height: 200px;
     }
 
@@ -214,20 +209,13 @@
         object-fit: contain;
     }
 
-    .top-article__text-content {
-        background-color: #f15d51;
-    }
     .top-article__text-content h3 {
         color: var(--silver);
         margin-top: 0;
-        /* padding-bottom: 2rem; */
-    }
-    .top-article__text-content > h5 {
-        /* padding-bottom: 2rem; */
     }
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 750px;
     margin: 2rem auto;
 }
