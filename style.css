@@ -41,6 +41,7 @@
     .h1 {
         font-size: var(--h1);
         font-weight: 800;
+        line-height: 56px;
     }
     h2,
     .h2 {
@@ -66,6 +67,8 @@
     .body {
         font-size: var(--body);
         font-weight: 400;
+        line-height: 26px;
+        color: var(--gunmetal);
     }
 }
 @layer utilities {
@@ -108,29 +111,17 @@
         background-color: var(--primary-white);
         display: flex;
         justify-content: start;
+        display: none;
     }
 
     .mobile-nav > ul {
-        /* background-color: #e9aa52; */
         padding: 4rem 2rem 0 2rem;
     }
     .mobile-nav ul li {
         padding: 1.5rem 0rem;
         color: var(--dark-blue);
         font-size: var(--h5);
-        /* font-size: ; */
     }
-
-    /* .full-screen-overlay {
-        background-color: #000;
-        opacity: 0.4;
-        width: 95vw;
-        height: 98vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-    } */
 
     /* hamburger + transitions for each svg line */
     .btn-hamburger {
@@ -171,7 +162,72 @@
     }
 }
 
+@layer main {
+    main p {
+        padding-bottom: 2rem;
+    }
+}
+
+@layer aside {
+    aside {
+        background-color: var(--dark-blue);
+        padding: 1rem 2rem;
+        margin-top: 4rem;
+    }
+
+    aside h2 {
+        color: var(--yellow);
+    }
+
+    .article-preview {
+        border-bottom: 1px solid var(--silver);
+    }
+
+    .article-preview h3 {
+        color: var(--primary-white);
+    }
+    .article-preview p {
+        color: var(--silver);
+    }
+
+    .article-preview:last-child {
+        border: none;
+    }
+}
+
+@layer section {
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    
+    .top-article-card {
+        display: flex;
+        gap: 2rem;
+        background-color: #e9aa52;
+        max-height: 200px;
+    }
+
+    .top-article-card img {
+        object-fit: contain;
+    }
+
+    .top-article__text-content {
+        background-color: #f15d51;
+    }
+    .top-article__text-content h3 {
+        color: var(--silver);
+        margin-top: 0;
+        /* padding-bottom: 2rem; */
+    }
+    .top-article__text-content > h5 {
+        /* padding-bottom: 2rem; */
+    }
+}
+
 .wrapper {
-    max-width: 375px;
+    max-width: 1000px;
     margin: 2rem auto;
 }
